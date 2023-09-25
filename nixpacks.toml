@@ -1,0 +1,8 @@
+# nixpacks.toml
+
+[phases.build]
+cmds = ["echo Building frontend service!", "ng build", "cp ./dist /usr/share/nginx/html"]
+
+
+[start]
+cmds = ["echo Starting frontend service!",  "sudo service nginx start"]
